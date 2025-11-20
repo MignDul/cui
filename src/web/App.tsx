@@ -7,14 +7,14 @@ import { useAuth, getAuthToken, setAuthToken } from './hooks/useAuth';
 
 function App() {
   // Handle auth token extraction from URL fragment
-  useAuth();
+  // useAuth();
 
-  // Check if user is authenticated
-  const authToken = getAuthToken();
+  // // Check if user is authenticated
+  // const authToken = getAuthToken();
   
-  if (!authToken) {
-    return <Login onLogin={setAuthToken} />;
-  }
+  // if (!authToken) {
+  //   return <Login onLogin={setAuthToken} />;
+  // }
 
   return (
     <Router

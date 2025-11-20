@@ -1,11 +1,11 @@
 {
-  "name": "cui-server",
-  "version": "0.6.3",
+  "name": "@baidu/cui-server-noauth",
+  "version": "0.6.7",
   "type": "module",
   "description": "Web UI Agent Platform based on Claude Code",
   "main": "dist/cui-server.js",
   "bin": {
-    "cui-server": "dist/server.js"
+    "cui-server-noauth": "dist/server.js"
   },
   "files": [
     "dist/**/*",

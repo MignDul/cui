@@ -43,25 +43,26 @@ export function parseArgs(argv: string[]): CLIConfig {
         }
         break;
         
-      case '--token':
-        if (i + 1 < args.length) {
-          config.token = args[++i];
-        } else {
-          logger.error('--token requires a value');
-          process.exit(1);
-        }
-        break;
+      // case '--token':
+      //   if (i + 1 < args.length) {
+      //     config.token = args[++i];
+      //   } else {
+      //     logger.error('--token requires a value');
+      //     process.exit(1);
+      //   }
+      //   break;
         
-      case '--skip-auth-token':
-        config.skipAuthToken = true;
-        break;
+      // case '--skip-auth-token':
+      //   config.skipAuthToken = true;
+      //   break;
         
       default:
         logger.error(`Unknown argument: ${arg}`);
-        logger.info('Usage: cui-server [--port <number>] [--host <string>] [--token <string>] [--skip-auth-token]');
+        logger.info('Usage: cui-server-noauth [--port <number>] [--host <string>]');
         process.exit(1);
     }
   }
   
+  config.skipAuthToken = true;
   return config;
 }
